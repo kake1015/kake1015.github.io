@@ -1,0 +1,301 @@
+:root {
+    --maincolor: #000000;
+}
+
+.bg {
+    background-color: var(--maincolor);
+
+}
+
+.navbar_top {
+    background-color: black;
+}
+
+@font-face {
+    font-family: "Felix Titling";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../font/FELIXTI.TTF") format("TTF")
+}
+
+@font-face {
+    font-family: "Cardinal";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../font/cardinalclassicshort-regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "TASA Orbiter DECK";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../font/TASAOrbiterVF.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "TASA Explorer";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../font/TASAExplorerVF.woff2") format("woff2")
+}
+.cursor-ball {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background-image: url('./img/cursor-ball.png');
+    background-size: cover;
+    transition-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+.body {
+    font-family: "Felix Titling", serif;
+    font-weight: 500;
+    font-size: var(--fs-text);
+    font-feature-settings: "palt";
+    cursor: url(img/cursor-arrow.png), auto;
+}
+
+.normal {
+    font-family: "TASA Orbiter DECK", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: var(--fs-text);
+    font-feature-settings: "palt";
+    letter-spacing: 0.1em;
+}
+
+.bodyin {
+    font-family: "Arial", serif;
+    font-weight: 500;
+    font-size: var(--fs-text);
+    font-feature-settings: "palt";
+    color: #869096;
+}
+
+.bodyin2 {
+
+    font-weight: 500;
+    font-size: var(--fs-text);
+    font-feature-settings: "palt";
+    color: #8f8f8f;
+}
+
+/* 滑桿隱藏 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.video-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    margin-bottom: 5%;
+
+    z-index: 0;
+}
+
+
+.titleIndex {
+    font-family: "Felix Titling", serif;
+    font-weight: 500;
+    font-size: 50px;
+    position: relative;
+    z-index: 5;
+
+    font-feature-settings: "palt";
+}
+
+.shape-ex1 {
+    animation: fade 0.7s linear;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.shape-ex2 {
+    animation: fadeOut 0.5s linear;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.shape-ex3 {
+    animation: fade 1.5s linear;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+a:link {
+
+    text-decoration: none;
+
+}
+
+
+a:active {
+
+    text-decoration: none;
+
+    color: #fafafa;
+}
+
+
+.text-btn {
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1)
+}
+
+@media(hover: hover) {
+    .text-btn:hover {
+        opacity: .25
+    }
+}
+
+.siteHeader {
+    position: fixed;
+    z-index: 10;
+    left: calc(var(--pad)*2);
+    top: calc(var(--pad)*2);
+    mix-blend-mode: screen
+}
+
+.siteHeader {
+    position: fixed;
+    z-index: 10;
+    left: calc(var(--pad)*2);
+    top: calc(var(--pad)*2);
+    text-shadow: rgb(198, 198, 198) 0.1em 0.1em 0.2em;
+}
+
+.siteHeader_title {
+    margin: -0.1em 0 0 -0.04em;
+
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    text-shadow: rgb(41, 41, 41) 0.1em 0.1em 0.2em;
+}
+
+.siteHeader_h2 {
+    margin: -0.1em 0 0 -0.04em;
+
+    font-size: 30px;
+    letter-spacing: 0.01em;
+    text-shadow: rgb(41, 41, 41) 0.1em 0.1em 0.2em;
+}
+
+@media(min-width: 1280px) {
+    .siteHeader_title {
+        font-size: 60px
+    }
+}
+
+.siteHeader_label {
+    margin-top: 5px;
+    font-size: 8px;
+    letter-spacing: 1.7em
+}
+
+.siteHeader_nav {
+    margin-top: 50px
+}
+
+.siteHeader_navText {
+    color: #eeeeee;
+    mix-blend-mode: screen
+}
+
+.siteHeader_nav ol {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px
+}
+
+.siteHeader_nav ol li {
+    position: relative
+}
+
+.siteHeader_nav ol li ._dot {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1)
+}
+
+
+.siteHeader_nav ol li ._text {
+    position: relative;
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1)
+}
+
+.siteHeader_nav ol li ._text::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px)
+}
+
+@media(hover: hover) {
+    .siteHeader_nav ol li ._text:hover {
+        opacity: .25
+    }
+}
+
+.siteHeader_nav ol li.is-selected {
+    pointer-events: none
+}
+
+.siteHeader_nav ol li.is-selected ._dot {
+    opacity: 1
+}
+
+.siteHeader_nav ol li.is-selected ._text {
+    opacity: 0
+}
+
+.contact_text {
+    display: block
+}
+
+.contact_text+.contact_text {
+    margin-top: 1em
+}
+
+/* holo */
